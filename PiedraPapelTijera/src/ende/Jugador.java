@@ -6,8 +6,8 @@ package ende;
 
 public class Jugador {
 	
-	Integer i = (int)(Math.random()*3);
-    String OPCION=""; 
+	Integer i = (int) (Math.random() * 3);
+    String OPCION = ""; 
     
     int exitos;      // número de partidas ganadas
     int winTotal;
@@ -16,17 +16,17 @@ public class Jugador {
     	
     }
     
-    public String opcion_al_azar()
+    public String opcionAlAzar()
     {
-        switch(i){
+        switch (i) {
             case 0:
-            	OPCION=("piedra");
+            	OPCION = ("piedra");
                 break;
             case 1:
-            	OPCION=("papel");
+            	OPCION = ("papel");
                 break;
             case 2:
-            	OPCION=("tijeras");
+            	OPCION = ("tijeras");
         }
         return OPCION;
     }
