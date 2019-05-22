@@ -5,11 +5,19 @@
 package ende;
 
 public class Jugador {
-
+	
+	Integer c = (int)(Math.random()*3);
+    String opcion="";
+    
+    int éxitos;      // número de partidas ganadas
+    int winTotal;
+    
+    public Jugador() {
+    	
+    }
+    
     public String opcion_al_azar()
     {
-        String opcion="";
-        Integer c = (int)(Math.random()*3);
         switch(c){
             case 0:
             	opcion=("piedra");
@@ -31,6 +39,5 @@ public class Jugador {
         return(éxitos);
     }
     
-    int éxitos;      // número de partidas ganadas
-    int winTotal;
+
 }

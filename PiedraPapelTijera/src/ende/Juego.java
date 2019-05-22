@@ -7,17 +7,19 @@ package ende;
 
 public class Juego 
 {
+	static Jugador p1=new Jugador();
+    static Jugador p2=new Jugador();
+    static boolean fin_de_juego=false;  
+    static Integer Rondasjugadas = 0;    // Número de rondas jugadas
+    static Integer EXITOS_jugador1=p1.éxitos;
+    static Integer EXITOS_jugador2=p2.éxitos;
+    static Integer EmPaTeS = 0;
+    
+    static String opcion_JUGADOR1;
+	static String opcion_JUGADOR2;
+    
     public static void main(String args[])
     {
-        Jugador p1=new Jugador();
-        Jugador p2=new Jugador();
-        boolean fin_de_juego=false;  
-        Integer Rondasjugadas = 0;    // Número de rondas jugadas
-        Integer EXITOS_jugador1=p1.éxitos;
-        Integer EXITOS_jugador2=p2.éxitos;
-        Integer EmPaTeS = 0;
-        String opcion_JUGADOR1, opcion_JUGADOR2;
-        
         // Bucle de juego
         do
         {
