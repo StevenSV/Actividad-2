@@ -24,14 +24,14 @@ public class Juego
         do {
             System.out.println("***** Ronda: " + RONDAS_JUGADAS + " *********************\n");
             System.out.println("Numero de empates: " + EMPATES + "\n");
-            opcionJugador1=P2.opcionAlAzar();
+            opcionJugador1 = P2.opcionAlAzar();
             System.out.println("Jugador 1: " + opcionJugador1 + "\t Jugador 1 - Partidas ganadas: " 
             		+ EXITOS_JUGADOR1);
             opcionJugador2 = P1.opcionAlAzar();
-            System.out.println("Jugador 2: " + opcionJugador2+"\t Jugador 2 - Partidas ganadas: " 
+            System.out.println("Jugador 2: " + opcionJugador2 + "\t Jugador 2 - Partidas ganadas: " 
             		+ EXITOS_JUGADOR2);
             
-            if((opcionJugador1.equals("piedra")) && (opcionJugador2.equals("papel"))) {
+            if ((opcionJugador1.equals("piedra")) && (opcionJugador2.equals("papel"))) {
                 System.out.println("Jugador 2 GANA");
                 EXITOS_JUGADOR2 = ++P1.exitos;
                 
@@ -47,7 +47,7 @@ public class Juego
             } else if ((opcionJugador1.equals("tijeras")) && (opcionJugador2.equals("papel"))) {
             	EXITOS_JUGADOR1 = ++P2.exitos;
                 System.out.println("Jugador 1 GANA");
-            }else if ((opcionJugador1.equals("papel"))&&(opcionJugador2.equals("tijeras"))){
+            } else if ((opcionJugador1.equals("papel"))&&(opcionJugador2.equals("tijeras"))){
             	EXITOS_JUGADOR2 = ++P1.exitos;
                 System.out.println("Jugador 2 GANA");
             }
