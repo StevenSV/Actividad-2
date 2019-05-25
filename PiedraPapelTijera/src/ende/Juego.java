@@ -10,10 +10,11 @@ public class Juego
 	static Jugador P2 = new Jugador();
     static Jugador P1 = new Jugador();
     static boolean FIN_DEL_JUEGO = false;  
-    static Integer RONDAS_JUGADAS = 0;    // Número de rondas jugadas
-    static Integer EXITOS_JUGADOR1 = P2.exitos;
-    static Integer EXITOS_JUGADOR2 = P1.exitos;
-    static Integer EMPATES = 0;
+    static int RONDAS_JUGADAS = 0;    // Número de rondas jugadas
+    static int EXITOS_JUGADOR1 = P2.exitos;
+    static int EXITOS_JUGADOR2 = P1.exitos;
+    static int EMPATES = 0;
+    static int TOTAL_VICTORIAS = 3;
     
     static String opcionJugador1;
 	static String opcionJugador2;
@@ -33,8 +34,7 @@ public class Juego
             
             if ((opcionJugador1.equals("piedra")) && (opcionJugador2.equals("papel"))) {
                 System.out.println("Jugador 2 GANA");
-                EXITOS_JUGADOR2 = ++P1.exitos;
-                
+                EXITOS_JUGADOR2 = ++P1.exitos;  
             } else if ((opcionJugador1.equals("papel")) && (opcionJugador2.equals("piedra"))) {
             	EXITOS_JUGADOR1 = ++P2.exitos;
                 System.out.println("Jugador 1 GANA");
@@ -47,16 +47,16 @@ public class Juego
             } else if ((opcionJugador1.equals("tijeras")) && (opcionJugador2.equals("papel"))) {
             	EXITOS_JUGADOR1 = ++P2.exitos;
                 System.out.println("Jugador 1 GANA");
-            } else if ((opcionJugador1.equals("papel"))&&(opcionJugador2.equals("tijeras"))){
+            } else if ((opcionJugador1.equals("papel")) && (opcionJugador2.equals("tijeras"))) {
             	EXITOS_JUGADOR2 = ++P1.exitos;
                 System.out.println("Jugador 2 GANA");
             }
-            if (opcionJugador1==opcionJugador2){
+            if (opcionJugador1 == opcionJugador2){
             	EMPATES++;
                 System.out.println("\n\t\t\t Empate \n");
             }
             RONDAS_JUGADAS++;
-            if ((P2.exitos>=3) || (P1.exitos>=3)) {
+            if ((P2.exitos >= TOTAL_VICTORIAS) || (P1.exitos >= TOTAL_VICTORIAS)) {
             	FIN_DEL_JUEGO = true;
                 System.out.println("FIN DEL JUEGO!!");
             }

@@ -30,10 +30,12 @@ public class Jugador {
         }
         return OPCION;
     }
+    
     public void setExitos() 
     {
         exitos++;
     }
+    
     public int getExitos() 
     {
         return(exitos);
